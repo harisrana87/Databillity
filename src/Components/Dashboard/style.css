@@ -279,16 +279,29 @@ font-size: 89% !important;
 .persona-detail{
   display: flex !important;
   flex-direction: row !important;
-  margin-top: 32px !important;
-  margin-left: 32px !important;
+  margin-top: 20px !important;
+  margin-left: 17px !important;
   align-items: baseline !important;
-  margin-bottom: 16px !important;
+  /* margin-bottom: px !important; */
   /* margin-right: 10px !important; */
 }
 .css-9nbo2v-MuiTypography-root {
-  margin-left: 36px !important;
-  margin-top: 42px !important;
+  /* margin-left: 1px !important; */
+  margin-top: 65px !important;
+  margin-right: 82px !important;
 
+}
+.css-1on0dtf-MuiTypography-root {
+  margin-left: 0px !important;
+  margin-right: 68px !important;
+}
+.css-gjg9m0-MuiTypography-root {
+  margin-right: 90px !important;
+  margin-top: 58px !important;
+}
+.css-ahj2mt-MuiTypography-root {
+  font-weight: bold !important;
+  padding-right: 10px !important;
 }
 
 }
