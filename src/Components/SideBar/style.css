@@ -1,0 +1,76 @@
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  font-family: 'Copperplate', serif; /* Applied Copperplate font */
+  position: fixed; /* Fixed positioning for sidebar */
+  top: 0;
+  left: -250px; /* Hide sidebar off-screen by default */
+  height: 100%; /* Full height to cover the viewport */
+  background-color: rgba(255, 255, 255, 0.978); /* Sidebar background color */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  z-index: 1000; /* Ensure the sidebar is above other content */
+  transition: left 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+.sidebar.open {
+  left: 0; /* Show sidebar when open */
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.sidebarTitle {
+  padding: 25px 10px 12px 0px; /* Adjust padding as needed */
+  text-align: center;
+
+  /* background-color: rgba(35, 35, 93, 0.978); Match sidebar background color */
+}
+
+.titleText {
+  color: rgb(3, 11, 122);
+}
+
+.sidebarList {
+  width: 100%;
+  padding: 0;
+
+}
+
+.sidebarList .MuiListItem-root {
+  padding: 10px 16px;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sidebarList .MuiListItem-root:hover {
+  width: 90% !important;
+  border-radius: 10px !important;
+  background-color: rgba(104, 201, 231, 0.735); /* Background color on hover */
+  color: white; /* Text color change on hover */
+}
+
+.sidebarList .MuiListItemIcon-root,
+.sidebarList .MuiListItemText-root {
+  color: rgba(58, 58, 61, 0.978); /* Ensure text and icons are visible */
+}
+.css-h4y409-MuiList-root {
+  list-style: none;
+  margin: 0;
+  padding: 16px !important;
+  position: relative;
+  padding-top: 2% !important;
+  padding-bottom: 8px;
+}
+.sidebar.open ~ .css-1d6w9lk-MuiButtonBase-root-MuiIconButton-root:hover { 
+  margin: 251px !important;
+  /* position: relative; */
+}
+.sidebar.open ~ .css-hyum1k-MuiToolbar-root {
+  padding-left: 254px !important;
+  padding-right: 24px;
+}
+.css-10hburv-MuiTypography-root{
+  font-size: 20px !important;
+}

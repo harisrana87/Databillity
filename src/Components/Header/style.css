@@ -1,0 +1,61 @@
+.header {
+  background-color: rgba(35, 35, 93, 0.978) !important; /* Primary color */
+  padding: 1px !important;
+}
+
+.menuButton {
+  margin-right: 400px !important;
+  /* margin-left: 240px !important; */
+}
+.menuButton.shifted {
+  margin-left: 240px !important;
+
+}
+
+.avatar {
+  background-color: #fff;
+  color: #1976d2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search {
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-left: 730px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+
+  align-items: flex-end;
+}
+
+/* .searchIcon {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.inputRoot {
+  color: inherit;
+  width: 100%;
+}
+
+.inputInput {
+  padding: 8px 8px 8px 0;
+  padding-left: calc(1em + 32px);
+  transition: width 0.3s;
+  width: 100%;
+}
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+  flex-direction: row !important;
+}
+
+/* @media (min-width: 600px) {
+  .css-hyum1k-MuiToolbar-root {
+      padding-left: 254px !important;
+      padding-right: 24px;
+  }
+} */

@@ -1,0 +1,64 @@
+/* App.css */
+
+/* General styles */
+/* .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+
+/* Header styles */
+/* .header {
+  background-color: #282c34;
+  padding: 16px;
+  color: white;
+} */
+
+/* Main layout */
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 10%;
+  background-color: #f4f4f4;
+  padding-top: 0%;
+}
+
+/* Dashboard styles */
+.dashboard-wrapper {
+  position: relative;
+  flex: 1 1;
+  /* padding: 30px; */
+  padding-right: 3% ;
+  padding-top: 0;
+  padding-left: 3%;
+  margin-left: 0%;
+  margin-right: 0%;
+  background-color: #eae9e9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .dashboard-wrapper {
+    order: 1;
+  }
+}
+.sidebar.open ~ .dashboard-wrapper {
+  margin-left: 251px;
+  position: relative;
+}
+.sidebar.open ~ .css-hyum1k-MuiToolbar-root  {
+  padding-left: 251px !important;
+}
