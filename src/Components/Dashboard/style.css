@@ -205,3 +205,90 @@ font-size: 89% !important;
   align-items: center;
   justify-content: center;
 } */
+@media (max-width: 430px) {
+  .css-1rcs2ts-MuiTypography-root {
+ line-height: 20px !important;
+    font-weight: 800 !important;
+    font-size: 0.7rem !important;
+}
+.css-1nx8213-MuiTypography-root {
+    font-weight: 800 !important;
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+  
+}
+.offSite {
+  font-size: 15px;
+}
+.css-1pqm26d-MuiAvatar-img {
+  width: 110% !important;
+  height: 100% !important;
+}
+.css-1v7ljoe-MuiAvatar-root {
+  height: 90px !important;
+  width: 90px !important;
+  letter-spacing: -0.00433em;
+  margin: 10px;
+  font-weight: 400 !important;
+  font-size: 0.96rem;
+}
+  .css-e784if-MuiTypography-root {
+    font-size: 0.6rem !important;
+    font-weight: 400 !important;
+    border-radius: 8px !important;
+    border: 1px solid rgb(230, 230, 230);
+    /* border-color: grey !important; */
+
+}
+.css-pxtbsv-MuiTypography-root{
+  margin:6px !important;
+  
+}
+
+.css-1h7xlhf-MuiTypography-root{
+  font-size: 16px !important;
+  display: flex;
+  
+  /* margin: 0px 0px 0px 0px !important; */
+}
+.css-1n5eedc-MuiDivider-root {
+  margin-left: 22px !important;
+  margin-right: 16px !important;
+  /* color: #1f1f1f !important; */
+  background-color:#1f1f1f !important ;
+}
+.css-1844srb-MuiTypography-root {
+  margin-left:0px !important;
+}
+.persona-section{
+  display: flex !important;
+  flex-direction: row !important;
+  /* margin-bottom: 35px;
+  margin-top: 40px; */
+  /* margin: 30px !important; */
+  
+
+}
+.css-t2lr08-MuiGrid-root {
+  margin-bottom: 0px !important;
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+
+}
+
+.persona-detail{
+  display: flex !important;
+  flex-direction: row !important;
+  margin-top: 32px !important;
+  margin-left: 32px !important;
+  align-items: baseline !important;
+  margin-bottom: 16px !important;
+  /* margin-right: 10px !important; */
+}
+.css-9nbo2v-MuiTypography-root {
+  margin-left: 36px !important;
+  margin-top: 42px !important;
+
+}
+
+}
