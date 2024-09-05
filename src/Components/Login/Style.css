@@ -1,0 +1,130 @@
+/* Style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #00408e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    width: 140%;
+    max-width: 1200px;
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff; /* Ensures both sides have a white background */
+  }
+  
+  .left-side {
+    
+    margin-left: 3%;
+    margin-right: 2%;
+    flex: 1;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .left-side h1 {
+    margin-bottom: 15%;
+    color: #0236c4;
+  }
+  
+  .left-side form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-side label {
+    margin-top: 8%;
+    font-weight: bold;
+  }
+  
+  .left-side input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 57%;
+  }
+  .left-side .google-btn {
+    background-color: #db4437;
+    display: flex;
+    font-size: 1.2em; 
+    /* color: #db4437; */
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    gap: 10px; /* Space between icon and text */
+  }
+  
+  .left-side button {
+    margin-top: 10px;
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #011754;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .left-side .google-btn {
+    background-color: #db4437;
+  }
+  
+  .left-side button:hover {
+    opacity: 0.9;
+  }
+  
+  /* .left-side p {
+    margin-top: 10px;
+  } */
+  
+  .left-side a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .left-side a:hover {
+    text-decoration: underline;
+  }
+  
+  .right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensure the SVG or image fits the container */
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .forget{
+    
+    padding-left: 25%;
+  }
+  .password{
+    padding-top: 6%;
+  }
+  .signup{
+    font-size: 90%;
+    padding-top: 3%;
+    font-weight: bold;
+    padding-left: 60px;
+  }
+  .continue{
+    padding-left: 65px;
+    padding-top: 5%;
+    color: rgb(148, 148, 148);
+  }
