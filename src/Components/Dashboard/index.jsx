@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDashboardData } from '../Redux/Reducer/dashboardReducer';
+import { fetchDashboardData } from '../Redux/Actions/Dashboard/dashboardActions';
 import { Box, Typography, Avatar, Paper, Grid, Divider } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,6 +9,7 @@ import BulletIcon from '@mui/icons-material/FiberManualRecord';
 import Feed from '../Feed';
 import Sidebar from '../SideBar/index';
 import Carousel from 'react-material-ui-carousel';
+import DashboardHeader from '../Header/index'
 
 import "./style.css";
 
@@ -47,6 +48,7 @@ export default function Dashboard() {
 
   return (
     <>
+    <DashboardHeader/>
       <Sidebar isOpen={isSidebarOpen} onToggle={handleSidebarToggle} />
       <Box className="main-container">
         <Box className="dashboard-container">
