@@ -1,20 +1,4 @@
-/* App.css */
 
-/* General styles */
-/* .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-} */
-
-/* Header styles */
-/* .header {
-  background-color: #282c34;
-  padding: 16px;
-  color: white;
-} */
-
-/* Main layout */
 .main-container {
   display: flex;
   flex: 1;
@@ -22,7 +6,7 @@
 
 /* Sidebar styles */
 .sidebar {
-  width: 10%;
+  width: 6%;
   background-color: #f4f4f4;
   padding-top: 0%;
 }
