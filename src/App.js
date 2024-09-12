@@ -7,7 +7,7 @@ import DashboardHeader from './Components/Header';
 import Sidebar from './Components/SideBar';
 import "../src/App.css";
 import Insights from './Components/Insights'; // Assuming InsightsPage is a separate component
-import CustomerTable from './Components/customerTable';
+// import CustomerTable from './Components/customerTable';
 
 function DashboardPage() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -62,7 +62,7 @@ function App() {
           element={<Navigate to="/login" />} 
         />
 
-         <Route path="/individuals" element={<CustomerTable />} />
+       
       </Routes>
     </Router>
   );

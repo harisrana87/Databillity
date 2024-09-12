@@ -1,8 +1,20 @@
 .body{
-    background-color: rgb(201, 201, 201);
+    background-color: #e7e5e5;
+    margin-left: 64px;
+    padding-left: 2%;
+    padding-right: 5%;
+    
+}
+
+body{
+    background-color: #e7e5e5;
 }
 .insights-page {
-    padding: 20px;
+    padding: 0px;
+    margin: 1%;
+  }
+  .sidebar.open {
+    padding-right: 8%;
   }
   
   .sales-container, 
@@ -34,6 +46,10 @@
     text-align: center;
     border: 1px solid #ccc;
   }
+  .css-1oqqzyl-MuiContainer-root {
+    width: 115%;
+    margin-left: 7%;
+}
   /* .css-3u1piw-MuiTypography-root {
     font-size: 1.8rem !important;
     font-weight: bold !important;
@@ -71,20 +87,53 @@ height: 8% !important;
 }
 .buying-journey-container {
     position: relative;
+    padding: 16px;
+    text-align: center;
   }
   
-  .buying-journey-container img {
-    /* position: absolute; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Ensure the SVG is above other content */
+  .buying-journey-button {
+    width: 100%;
   }
   
-  .dotted-lines {
-    position: relative;
-    height: 20px;
-    margin-top: 20px; /* Adjust if needed */
+  .left-button {
+    border-radius: 15px !important;
+    width: 48% !important;
+    padding: 20px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    
   }
+  
+  .right-button {
+   
+    margin-bottom: 6% !important;
+    padding: 24px 0px !important;
+    border-radius: 50% !important;
+    width: 34% ;
+    height: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .css-e784if-MuiTypography-root {
+    font-size: 0.6rem !important;
+  }
+  
+  .buying-journey-svg {
+    width: 100%;
+    max-width: 340px;
+    transform: rotateX(180deg); /* Rotate the image 180 degrees on the Y axis to flip it */
+    transform-origin: center center; /* Rotate around the center */
+    transition: transform 0.6s; /* Smooth transition effect */
+  }
+  .css-p4wudk-MuiSvgIcon-root {
+    margin-bottom:54px ;
+    margin-left: 0px !important;
+  }
+
+
+  
+  
   
  
