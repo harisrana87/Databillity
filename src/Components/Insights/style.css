@@ -1,0 +1,90 @@
+.body{
+    background-color: rgb(201, 201, 201);
+}
+.insights-page {
+    padding: 20px;
+  }
+  
+  .sales-container, 
+  .profiles-container, 
+  .ltv-box, 
+  .upsell-box, 
+  .cross-sell-box, 
+  .buying-journey-container, 
+  .stat-box, 
+  .product-affinity-box, 
+  .top-sellers-box {
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .buying-journey-button {
+    width: 100%;
+  }
+  
+  .stat-box, 
+  .buying-journey-container, 
+  .sales-container, 
+  .profiles-container, 
+  .ltv-box, 
+  .upsell-box, 
+  .cross-sell-box, 
+  .product-affinity-box, 
+  .top-sellers-box {
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  /* .css-3u1piw-MuiTypography-root {
+    font-size: 1.8rem !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+    margin-top: 0px !important;
+    text-align: left !important;
+} */
+/* .css-1yuhvjn {
+    margin-top: -17px !important;
+} */
+.css-2ulfj5-MuiTypography-root {
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+}
+.css-qwujcl {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 55px !important;
+    text-align: center !important;
+}
+.cross-sell-box{
+    text-align: left ;
+}
+.upsell-box{
+    text-align: left ;
+}
+.ltv-box{
+    text-align: left;
+}
+.css-p4wudk-MuiSvgIcon-root {
+    padding-top: 3%;
+    padding-right: 3%;
+width: 8% !important;
+height: 8% !important;
+}
+.buying-journey-container {
+    position: relative;
+  }
+  
+  .buying-journey-container img {
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the SVG is above other content */
+  }
+  
+  .dotted-lines {
+    position: relative;
+    height: 20px;
+    margin-top: 20px; /* Adjust if needed */
+  }
+  
+ 

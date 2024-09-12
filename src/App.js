@@ -5,8 +5,9 @@ import Login from './Components/Login';
 import Dashboard from './Components/Dashboard';
 import DashboardHeader from './Components/Header';
 import Sidebar from './Components/SideBar';
-import "../src/App.css"
-
+import "../src/App.css";
+import Insights from './Components/Insights'; // Assuming InsightsPage is a separate component
+import CustomerTable from './Components/customerTable';
 
 function DashboardPage() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -38,8 +39,6 @@ function DashboardPage() {
   );
 }
 
-
-
 function App() {
   const userId = useSelector((state) => state.auth.user);
 
@@ -55,9 +54,15 @@ function App() {
           element={userId ? <DashboardPage /> : <Navigate to="/login" />} 
         />
         <Route 
+          path="/insights"
+          element={userId ? <Insights /> : <Navigate to="/login" />}
+        />
+        <Route 
           path="*" 
           element={<Navigate to="/login" />} 
         />
+
+         <Route path="/individuals" element={<CustomerTable />} />
       </Routes>
     </Router>
   );
