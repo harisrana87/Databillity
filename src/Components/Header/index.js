@@ -19,8 +19,7 @@ const DashboardHeader = ({ userName, onSidebarToggle, onLogout }) => {
   };
 
   return (
-    <AppBar position="static" className="header"> 
-    
+    <AppBar position="static" className="header">
       <Toolbar>
         <IconButton
           edge="start"
@@ -30,37 +29,41 @@ const DashboardHeader = ({ userName, onSidebarToggle, onLogout }) => {
         >
           <MenuIcon />
         </IconButton>
-     <div className='right-header'>  <div className='h1mobile-only'> DataBillity </div>        {/* Conditionally render the search bar or search icon based on screen size */}
-        <div className={`search-container ${searchOpen ? 'search-open' : ''}`}>
-          <IconButton
-            color="inherit"
-            onClick={handleSearchClick}
-            className="searchIcon mobile-only"
-            sx={{  size: '100px'}} 
-          >
-            < SearchIcon />
-          </IconButton>
-          <div className="search desktop-only">
-            <InputBase
-               placeholder="SDF"
-               classes={{
-                 root: 'inputRoot',
-                 input: 'inputInput',
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
+        <div className='right-header'>
+          <div className='h1mobile-only'> DataBillity </div>
+          <div className={`search-container ${searchOpen ? 'search-open' : ''}`}>
+            <IconButton
+              color="inherit"
+              onClick={handleSearchClick}
+              className="searchIcon mobile-only"
+              sx={{ size: '100px' }}
+            >
+              <SearchIcon />
+            </IconButton>
+            <div className="search desktop-only">
+              <InputBase
+                placeholder="Search"
+                classes={{
+                  root: 'inputRoot',
+                  input: 'inputInput',
+                }}
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </div>
           </div>
-        </div>
 
-        <Avatar sx={{ width: '25px', height: '25px', fontSize: '20px' }} className="avatar">
-          {userName.charAt(0)}
-        </Avatar>
+          <Avatar
+            sx={{ width: '25px', height: '25px', fontSize: '20px' }}
+            className="avatar"
+          >
+            {userName ? userName.charAt(0) : 'z'}
+          </Avatar>
 
-        <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 1 }} />
 
-        <IconButton className='logoutIcon' edge="end" color="inherit" onClick={onLogout}>
-          <ExitToAppIcon />
-        </IconButton>
+          <IconButton className='logoutIcon' edge="end" color="inherit" onClick={onLogout}>
+            <ExitToAppIcon />
+          </IconButton>
         </div>
       </Toolbar>
     </AppBar>

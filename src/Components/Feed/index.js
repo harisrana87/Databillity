@@ -3,15 +3,15 @@ import './style.css';
 import { Box, Typography, Avatar, Paper, Grid, Divider, Button } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFeedData } from '../Redux/Reducer/feedReducer';
-import { fetchDashboardData } from '../Redux/Reducer/dashboardReducer'; // Import dashboard action
+import { fetchFeedData } from '../Redux/Actions/Feed/feedActions';
+import { fetchDashboardData } from '../Redux/Actions/Dashboard/dashboardActions'; // Import dashboard action
 import Carousel from 'react-material-ui-carousel';
-// import { useNavigate } from 'react-router-dom'; // For navigation
+
 
 export default function Feed() {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.feed);
-  // const navigate = useNavigate(); // Use navigate to redirect
+
 
   useEffect(() => {
     dispatch(fetchFeedData());
@@ -25,17 +25,17 @@ export default function Feed() {
     return <Typography>Error: {error}</Typography>;
   }
 
-  // Function to handle click on name
+
   const handleNameClick = (id) => {
-    // Dispatch action to fetch data for the specific ID
+
     dispatch(fetchDashboardData(id));
     console.log('ID:', id);
     
-    // Navigate to the dashboard page
-    // navigate('/dashboard');
+
+
   };
 
-  // Group data into sets of 3
+
   const groupedData = [];
   for (let i = 0; i < data.length; i += 3) {
     groupedData.push(data.slice(i, i + 3));
@@ -62,7 +62,7 @@ export default function Feed() {
             key={groupIndex}
             sx={{
               padding: '20px',
-              // backgroundColor: 'rgba(178, 234, 240, 0.5)',
+
             }}
           >
             <Grid container direction="column" spacing={2}>
@@ -79,7 +79,7 @@ export default function Feed() {
                         src={item.background || `${process.env.PUBLIC_URL}/pic.jpeg`}
                         className="feed-image"
                       />
-                      {/* Name is now a button */}
+
                       <Button variant="text" onClick={() => handleNameClick(item.id)}>
                         <Typography sx={{ color:'black', fontWeight:'bold'}} variant="h6">{item.name || 'No Name'}</Typography>
                       </Button>

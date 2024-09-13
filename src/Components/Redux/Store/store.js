@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import dashboardReducer from '../Reducer/dashboardReducer';
-
-import feedReducer from '../Reducer/feedReducer';
+import dashboardReducer from '../Reducer/Dashboard/dashboardReducer';
+import authReducer from '../Reducer/Auth/authReducer';
+import feedReducer from '../Reducer/Feed/feedReducer';
 
 const store = configureStore({
   reducer: {
@@ -9,6 +9,7 @@ const store = configureStore({
     dashboard: dashboardReducer,
    
     feed: feedReducer,
+    auth: authReducer,
   },
 });
 

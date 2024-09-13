@@ -1,5 +1,6 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Divider } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
 import PeopleIcon from '@mui/icons-material/People';
 import InsightsIcon from '@mui/icons-material/Insights';
@@ -13,27 +14,26 @@ const Sidebar = ({ isOpen, onToggle }) => {
       <div className="sidebarTitle">
         <Typography variant="h5" className="titleText">DATABILLITY</Typography>
       </div>
-      {/* <Divider /> */}
       <List className="sidebarList">
-        <ListItem button>
+        <ListItem button component={Link} to="/dashboard">
           <ListItemIcon>
             <PeopleIcon />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        <ListItem button>
+        <ListItem button component={Link} to="/connections">
           <ListItemIcon>
             <WifiTetheringIcon />
           </ListItemIcon>
           <ListItemText primary="Connections" />
         </ListItem>
-        <ListItem button>
+        <ListItem button component={Link} to="/insights">
           <ListItemIcon>
             <InsightsIcon />
           </ListItemIcon>
           <ListItemText primary="Insights" />
         </ListItem>
-        <ListItem button>
+        <ListItem button component={Link} to="/settings">
           <ListItemIcon>
             <SettingsIcon />
           </ListItemIcon>

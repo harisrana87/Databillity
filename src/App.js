@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Login from './Components/Login';
+import Dashboard from './Components/Dashboard';
 import DashboardHeader from './Components/Header';
 import Sidebar from './Components/SideBar';
-import Dashboard from './Components/Dashboard';
+import "../src/App.css";
+import Insights from './Components/Insights'; // Assuming InsightsPage is a separate component
+// import CustomerTable from './Components/customerTable';
 
-function App() {
+function DashboardPage() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const handleSidebarToggle = () => {
@@ -31,6 +36,35 @@ function App() {
         </div>
       </div>
     </div>
+  );
+}
+
+function App() {
+  const userId = useSelector((state) => state.auth.user);
+
+  return (
+    <Router>
+      <Routes>
+        <Route 
+          path="/login" 
+          element={userId ? <Navigate to="/dashboard" /> : <Login />} 
+        />
+        <Route 
+          path="/dashboard" 
+          element={userId ? <DashboardPage /> : <Navigate to="/login" />} 
+        />
+        <Route 
+          path="/insights"
+          element={userId ? <Insights /> : <Navigate to="/login" />}
+        />
+        <Route 
+          path="*" 
+          element={<Navigate to="/login" />} 
+        />
+
+       
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,11 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-// Define the initial state
-const initialState = {
-  data: [], 
-  loading: 'idle', 
-  error: null,
-};
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk to fetch feed data from the API
 export const fetchFeedData = createAsyncThunk(
@@ -17,9 +10,9 @@ export const fetchFeedData = createAsyncThunk(
           'accept': 'application/json, text/plain, */*',
           'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
           'access-control-allow-credentials': 'true',
-          'origin': 'https://app.stg.databillity.com', // updated origin
+          'origin': 'https://app.stg.databillity.com',
           'priority': 'u=1, i',
-          'referer': 'https://app.stg.databillity.com/', // updated referer
+          'referer': 'https://app.stg.databillity.com/',
           'sec-ch-ua': '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
           'sec-ch-ua-mobile': '?0',
           'sec-ch-ua-platform': '"macOS"',
@@ -36,26 +29,3 @@ export const fetchFeedData = createAsyncThunk(
     return response.json();
   }
 );
-
-const feedSlice = createSlice({
-  name: 'feed',
-  initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchFeedData.pending, (state) => {
-        state.loading = 'loading';
-      })
-      .addCase(fetchFeedData.fulfilled, (state, action) => {
-        state.loading = 'succeeded';
-        state.data = action.payload; // Use 'data' here as per your initial state
-      })
-      .addCase(fetchFeedData.rejected, (state, action) => {
-        state.loading = 'failed';
-        state.error = action.error.message;
-      });
-  },
-});
-
-export default feedSlice.reducer;
-// export { fetchFeedData };

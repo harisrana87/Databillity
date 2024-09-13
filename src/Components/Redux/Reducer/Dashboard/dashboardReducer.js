@@ -1,6 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchDashboardData } from '../../Actions/Dashboard/dashboardActions';
 
-// Define the initial state
+
 const initialState = {
   customerDetails: {
     name: '',
@@ -21,30 +22,6 @@ const initialState = {
   error: null,
 };
 
-// Async thunk to fetch data from the API
-const fetchDashboardData = createAsyncThunk(
-  'dashboard/fetchDashboardData',
-  async (customerId) => {
-    console.log("id from reducer",customerId);
-    const defaultId="3c9b1d61-2f3d-4248-b834-b5f288c7b775";
-    
-    const response = await fetch(`https://xvufjkvibh.execute-api.us-east-1.amazonaws.com/api/dashboard/${customerId? customerId:defaultId}`, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Origin': 'https://app.stg.databillity.com',
-        'X-Api-Key': 'X97c1sUayGBCfivJgWYO6mvvWkmdtpl6IbVDOGlh',
-      },
-    });
-    console.log("stored data in reducer:",initialState);
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch dashboard data');
-    }
-    return response.json();
-  }
-);
-
 const dashboardSlice = createSlice({
   name: 'dashboard',
   initialState,
@@ -56,7 +33,7 @@ const dashboardSlice = createSlice({
       })
       .addCase(fetchDashboardData.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        // Update state with API response data
+
         state.customerDetails = action.payload.customerDetails || state.customerDetails;
         state.personaDetails = action.payload.personaDetails || state.personaDetails;
         state.preferenceDetails = action.payload.preferenceDetails || state.preferenceDetails;
@@ -70,4 +47,3 @@ const dashboardSlice = createSlice({
 });
 
 export default dashboardSlice.reducer;
-export { fetchDashboardData };
